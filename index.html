@@ -168,48 +168,63 @@
 						clear: both;
 					}
 			</style>
-<script type="text/javascript">
-(function($){
-   $.fn.snow = function(options){
-   var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
-   documentHeight     = $(document).height(),
-   documentWidth  = $(document).width(),
-   defaults = {
-      minSize   : 10,
-      maxSize   : 20,
-      newOn     : 1000,
-      flakeColor : "#FFFFFF"
-   },
-   options = $.extend({}, defaults, options);
-   var interval= setInterval( function(){
-   var startPositionLeft = Math.random() * documentWidth - 100,
-   startOpacity = 0.5 + Math.random(),
-   sizeFlake = options.minSize + Math.random() * options.maxSize,
-   endPositionTop = documentHeight - 200,
-   endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
-   durationFall = documentHeight * 10 + Math.random() * 5000;
-   $flake.clone().appendTo('body').css({
-      left: startPositionLeft,
-      opacity: startOpacity,
-      'font-size': sizeFlake,
-      color: options.flakeColor
-   }).animate({
-      top: endPositionTop,
-      left: endPositionLeft,
-      opacity: 0.2
-   },durationFall,'linear',function(){
-        $(this).remove()
-   });
-   }, options.newOn);
-    };
-    })(jQuery);
-$(function(){
-    $.fn.snow({
-       minSize: 5, 
-       maxSize: 50,
-       newOn: 300  
-    });
-});
+<script language="JavaScript">
+var col = new Array('#ffffff','#fff000','#ffa000','#ff00ff','#00ff00','#0000ff','#ff0000');
+var p='<div id="rearDiv" style="position:absolute;top:0px;left:0px">';
+var n=0;
+for (i=0;i<14;  i){
+n  ;
+if (n=(col.length-1)) n=0;
+p=p '<div style="position:relative;width:1px;height:1px;background:' col[n] ';font-size:3px">.</div>';
+}
+p=p "</div>";
+document.write(p);
+var Clrs = new Array('ff0000','00ff00','000aff','ff00ff','ffa500','ffff00','00ff00','ffffff','fffff0');
+var sClrs = new Array('ffa500','55ff66','AC9DFC','fff000','fffff0');
+var peepY;
+var peepX;
+var step = 5;
+var tallyStep = 0;
+var backColor = 'ffa000';
+var Mtop = 250;
+var Mleft = 250;
+function dissilient() {
+peepY = window.document.body.clientHeight/3;
+peepX = window.document.body.clientWidth/8;
+enlarge();
+tallyStep = step;
+reduce();
+T=setTimeout("dissilient()",20);
+}
+function enlarge(){
+for ( i = 0 ; i < rearDiv.all.length ; i   ) {
+var c=Math.round(Math.random()*(Clrs.length-1));
+if (tallyStep < 90)
+rearDiv.all[i].style.background=backColor;
+if (tallyStep > 90)
+rearDiv.all[i].style.background=Clrs[c];
+rearDiv.all[i].style.top = Mtop   peepY*Math.sin((tallyStep i*5)/3)*Math.sin(550 tallyStep/100);
+rearDiv.all[i].style.left = Mleft   peepY*Math.cos((tallyStep i*5)/3)*Math.sin(550 tallyStep/100);
+}
+}
+function reduce(){
+if (tallyStep == 220) {
+tallyStep = -10;
+var k=Math.round(Math.random()*(sClrs.length-1));
+backColor = sClrs[k];
+Dtop = window.document.body.clientHeight - 250;
+Dleft = peepX * 3.5;
+Mtop = Math.round(Math.random()*Dtop);
+Mleft = Math.round(Math.random()*Dleft);
+document.all.rearDiv.style.top = Mtop document.body.scrollTop;
+document.all.rearDiv.style.left = Mleft document.body.scrollLeft;
+if ((Mtop < 20) || (Mleft < 20)) {
+Mtop  = 90;
+Mleft  = 90;
+}
+}
+}
+dissilient();
 </script>
 
 	</body>
