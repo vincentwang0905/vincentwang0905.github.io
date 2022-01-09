@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>【FS.TW】炸蝦伺服器</title>
+		<meta charset="utf-8" />
+		<meta content="炸蝦伺服器" property="og:title" />
+		<meta content="這裡會放一些資料供各位參考" property="og:description" />
+		<meta content="https://vincentwang0905.github.io/" property="og:url" />
+		<meta content="" property="og:image" />
+		<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/head.png" type="image/x-icon" />
+		<noscript>請開啟JS來閱讀此網站</noscript>
+	</head>
+	<body class="banner1">
+        <style>
+            .banner1 {
+				background-attachment: fixed;
+				background-image: linear-gradient(rgb(40, 25, 40), rgb(60, 30, 50), rgb(80, 35, 65));
+				background-position: center;
+			}
+
+        </style>
+		<div id="maintoppage">
+            <style>
+            .maintoppage {
+		        padding-top: 3.5em;
+            }
+            </style>
+				<header class="header">
+                    <style>
+                    .header {
+                    background: rgba(0, 0, 0, 0.975);
+                    color: #a6a6a6;
+                    cursor: default;
+                    height: 3.3em;
+                    left: 0;
+                    line-height: 3.25em;
+                    position: fixed;
+                    text-align: right;
+                    top: 0;
+                    width: 100%;
+                        z-index: 10001;
+                    }
+                    </style>
+					<h3 class="logo blink">【FS.TW】炸蝦伺服器</h1>
+						<style>
+      					.blink {
+        					animation: blinker 2s linear infinite;
+        					color: #C0C0C0;
+        					font-size: 20px;
+        					font-weight: bold;
+        					font-family: sans-serif;
+      					}
+						.logo {
+			        		display: inline-block;
+			        		height: inherit;
+			        		left: 1.25em;
+			        		line-height: inherit;
+			       			margin: 0;
+			        		padding: 0;
+			        		position: absolute;
+			        		top: 0;
+		            	}
+      					@keyframes blinker {
+        					50% {
+          					opacity: 0;
+        					}
+						}
+						</style>
+						<a href="index.html" class="button primary abutton">首頁</a>
+                        <a class="button disabled abutton">伺服器[籌備]</a>
+					    <a class="button disabled abutton">群組[籌備]</a>
+						<a href="#" class="button primary abutton">其他相關</a>
+					</nav>
+				</header>
+			<button type="button" id="BackTop" class="toTop-arrow"></button>
+			<script>
+				$(function(){
+					$('#BackTop').click(function(){ 
+						$('html,body').animate({scrollTop:0}, 2500);
+					});
+					$(window).scroll(function() {
+						if ( $(this).scrollTop() > 100 ){
+							$('#BackTop').fadeIn(50);
+						} else {
+							$('#BackTop').stop().fadeOut(50);
+						}
+					}).scroll();
+				});
+			</script>
+			<style>
+				.toTop-arrow {
+					width: 3.0rem;
+					height: 3.0rem;
+					padding: 0;
+					margin: 0;
+					border: 0;
+					border-radius: 33%;
+					opacity: 0.6;
+					background: #000;
+					cursor: pointer;
+					position:fixed;
+					z-index: 999999999;
+					right: 5rem;
+					bottom: 1rem;
+					display: none;
+					}
+					.toTop-arrow::before, .toTop-arrow::after {
+					width: 18px;
+					height: 5px;
+					border-radius: 3px;
+					background: #f90;
+					position: absolute;
+					z-index: 999999999;
+					content: "";
+					}
+					.toTop-arrow::before {
+						transform: rotate(-45deg) translate(0, -50%);
+						left: 0.75rem;
+					}
+					.toTop-arrow::after {
+						transform: rotate(45deg) translate(0, -50%);
+						right: 0.75rem;
+					}
+					.toTop-arrow:focus {outline: none;}
+
+					.card {
+  						box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  						transition: 0.3s;
+  						width: 130px;
+  						float: left;
+  						padding: 10px;
+					}
+					.card:hover {
+  						box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+					}
+					.cardcontainer {
+  						padding: 1px 8px;
+					}
+					.clearfix {
+						*zoom: 1;
+					}
+					.clearfix:after {
+						content: "";
+						display: table;
+						line-height: 0;
+						clear: both;
+					}
+			</style>
+		<footer id="footer">
+			<ul class="icons">
+				<li class="fbutton small"><a href="https://reurl.cc/dGn3Yy" class="fblink">Facebook</a></li>
+				<li class="fbutton small"><a href="https://discord.gg/YRu75UHSWz" class="fblink">Discord</a></li>
+				<li class="fbutton small"><a href="https://github.com/vincentwang0905" class="fblink">GitHub</a></li>
+				<li class="fbutton small"><a href="mailto:vincentx0905.gmail.com" class="fblink">Email</a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; 版權所有:炸蝦</li>
+			</ul>
+		</footer>
+		<style>
+			.fbutton {
+    			-moz-appearance: none;
+    			-webkit-appearance: none;
+    			-ms-appearance: none;
+    			appearance: none;
+    			-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    			-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    			-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    			background-color: rgba(255, 0, 255, 0.2);
+    			border-radius: 4px;
+    			border: 0;
+    			box-shadow: inset 0 0 0 4px rgba(255, 0, 255, 0.5);
+    			color: #ffffff !important;
+    			cursor: pointer;
+    			display: inline-block;
+    			font-weight: 300;
+    			height: 3em;
+				width: 5em;
+    			line-height: 3em;
+    			padding: 0 2.25em;
+    			text-align: center;
+    			text-decoration: none;
+    			white-space: nowrap;
+				}
+			input[type="submit"].small,
+    		input[type="reset"].small,
+    		input[type="button"].small,
+    		.fbutton small {
+    		    font-size: 0.8em;
+    		}
+			.fblink {
+			  animation: blinker 0.8s linear infinite;
+			  color: #f700ff;
+			  font-size: 15px;
+			  font-weight: bold;
+			  font-family: sans-serif;
+			}
+			@keyframes blinker {
+			  50% {
+				opacity: 0;
+			  }
+		  }
+		  </style>
+	</body>
+</html>
