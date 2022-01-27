@@ -227,7 +227,7 @@ ul.icons li {
                 font-size: 2em;
             }
 
-            @media (max-width: 600px){
+            @media (max-width: 800px){
 				/* 這裡面放手機版的css設定，不用在意其他的設定(如果怕衝突) */
 				/* 直接把這裡面當一般的css寫就好 */
 				.fb{
@@ -246,4 +246,53 @@ ul.icons li {
 					position: relative;
 					top: 400px;
 				}
+                .logo {
+                    display: inline-block;
+                    height: inherit;
+                    line-height: inherit;
+                    margin: 0;
+                    padding: 0;
+                    top: 0;
+                    left: 0px;
+                    
+                }
+                .header {
+                    position: relative;
+                    background: rgba(0, 0, 0, 0.975);
+                    color: #a6a6a6;
+                    cursor: default;
+                    left: 0;
+                    line-height: 3.25em;
+                    text-align: left;
+                    top: 0;
+                    width: 100%;
+                    z-index: 10001;
+                    }
+			}
+            @media (min-width: 800px){
+				/* 這裡面放電腦版的css設定，不用在意其他的設定(如果怕衝突) */
+				/* 直接把這裡面當一般的css寫就好 */
+                .header {
+                    position: fixed;
+                    background: rgba(0, 0, 0, 0.975);
+                    color: #a6a6a6;
+                    cursor: default;
+                    left: 0;
+                    line-height: 3.25em;
+                    text-align: right;
+                    top: 0;
+                    width: 100%;
+                    z-index: 10001;
+                    }
+                    .logo {
+                        display: inline-block;
+                        height: inherit;
+                        position: fixed;
+                        line-height: inherit;
+                           margin: 0;
+                        padding: 0;
+                        top: 0;
+                        left: 0px;
+                        
+                    }
 			}
