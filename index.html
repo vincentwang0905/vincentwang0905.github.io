@@ -22,11 +22,7 @@
 				background-image: linear-gradient(rgb(40, 25, 40), rgb(60, 30, 50), rgb(80, 35, 65));
 				background-position: center;
 			}
-			@media (max-width: 600px){
-				/* 這裡面放手機版的css設定，不用在意其他的設定(如果怕衝突) */
-				/* 直接把這裡面當一般的css寫就好 */
-				
-			}
+
         </style>
 		<div id="maintoppage">
             <style>
@@ -34,23 +30,13 @@
 		        padding-top: 3.5em;
             }
             </style>
-				<header class="header">
-                    <style>
-                    .header {
-                    background: rgba(0, 0, 0, 0.975);
-                    color: #a6a6a6;
-                    cursor: default;
-                    height: 3.3em;
-                    left: 0;
-                    line-height: 3.25em;
-                    position: fixed;
-                    text-align: right;
-                    top: 0;
-                    width: 100%;
-                        z-index: 10001;
-                    }
-                    </style>
-					<h3 class="logo blink">【FS.TW】炸蝦伺服器</h1>
+				<div class="header">
+
+					<p class="logo blink">【FS.TW】炸蝦伺服器</p>
+						<a href="index.html" class="button primary abutton" id="home">首頁</a>
+                        <a class="button disabled abutton" id="server">伺服器[籌備]</a>
+					    <a class="button disabled abutton" id="group">群組[籌備]</a>
+						<a href="#" class="button primary abutton" id="other">其他相關</a>
 						<style>
       					.blink {
         					animation: blinker 2s linear infinite;
@@ -59,28 +45,46 @@
         					font-weight: bold;
         					font-family: sans-serif;
       					}
+						  
 						.logo {
 			        		display: inline-block;
 			        		height: inherit;
-			        		left: 1.25em;
+			        		
 			        		line-height: inherit;
 			       			margin: 0;
 			        		padding: 0;
-			        		position: absolute;
 			        		top: 0;
+							position: relative;
 		            	}
       					@keyframes blinker {
         					50% {
           					opacity: 0;
         					}
 						}
+						@media (max-width: 800px){
+							/* 這裡面放手機版的css設定，不用在意其他的設定(如果怕衝突) */
+							/* 直接把這裡面當一般的css寫就好 */
+							button{
+								width: 50px;
+							}
+
+						}
 						</style>
-						<a href="index.html" class="button primary abutton">首頁</a>
-                        <a class="button disabled abutton">伺服器[籌備]</a>
-					    <a class="button disabled abutton">群組[籌備]</a>
-						<a href="#" class="button primary abutton">其他相關</a>
+                    <style>
+						.header {
+						background: rgba(0, 0, 0, 0.975);
+						color: #a6a6a6;
+						cursor: default;
+						left: 0;
+						line-height: 3.25em;
+						text-align: left;
+						top: 0;
+						width: 100%;
+							z-index: 10001;
+						}
+						</style>
 					</nav>
-				</header>
+				</div>
 			<button type="button" id="BackTop" class="toTop-arrow"></button>
 			<script>
 				$(function(){
@@ -155,17 +159,17 @@
 						clear: both;
 					}
 			</style>
-		<footer id="footer">
+		<div id="footer">
 			<ul class="icons">
-				<li class="fbutton small"><a href="https://reurl.cc/dGn3Yy">Facebook</a></li>
-				<li class="fbutton small"><a href="https://discord.gg/YRu75UHSWz">Discord</a></li>
-				<li class="fbutton small"><a href="https://github.com/vincentwang0905">GitHub</a></li>
-				<li class="fbutton small"><a href="mailto:vincentx0905.gmail.com">Email</a></li>
+				<li class="fbutton" id="fb"><a href="https://reurl.cc/dGn3Yy">Facebook</a></li>
+				<li class="fbutton" id="dc"><a href="https://discord.gg/YRu75UHSWz">Discord</a></li>
+				<li class="fbutton" id="git"><a href="https://github.com/vincentwang0905">GitHub</a></li>
+				<li class="fbutton" id="email"><a href="mailto:vincentx0905.gmail.com">Email</a></li>
 			</ul>
 			<ul class="copyright">
 				<li>&copy; 版權所有:炸蝦</li>
 			</ul>
-		</footer>
+		</div>
 		<style>
 			.fbutton {
     			-moz-appearance: none;
@@ -191,6 +195,7 @@
     			text-align: center;
     			text-decoration: none;
     			white-space: nowrap;
+				background-color: white;
 				}
 			input[type="submit"].small,
     		input[type="reset"].small,
