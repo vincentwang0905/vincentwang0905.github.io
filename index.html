@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/709d27feae.js" crossorigin="anonymous"></script>    
+    <title>FSTW | 炸蝦勞工集中服</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image">
+                <img src="logo.png">
+                <span class="name text">&nbsp;&nbsp;FSTW | 炸蝦服</span>
+            </div>
+            <div class="logo-text">
+            </br><i class='fa-solid fa-bars toggle icon' id="btn"></i>
+              </div>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='fa-solid fa-search icon'></i>
+                    <input type="text" placeholder="搜尋...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='fa-solid fa-home icon' ></i>
+                            <span class="text nav-text">主頁</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='fa-solid fa-moon icon moon'></i>
+                        <i class='fa-solid fa-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">切換黑暗模式</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">空空的欸!</div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "切換亮彩模式";
+    }else{
+        modeText.innerText = "切換黑暗模式";
+        
+    }
+}); 
+    window.oncontextmenu=function(){return false;}  
+    window.onkeydown = window.onkeyup = window.onkeypress = function () { 
+        window.event.returnValue = false; 
+        return false; 
+    } 
+    var h = window.innerHeight,w=window.innerWidth; 
+    window.onresize = function () { 
+        if (h!= window.innerHeight||w!=window.innerWidth){ 
+            window.close(); 
+            window.location = "#"; 
+        } 
+    }
+</script>
+
+</body>
+</html>
