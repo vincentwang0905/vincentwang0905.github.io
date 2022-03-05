@@ -13,11 +13,12 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --covid-text-color: #FFFF00;
 
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
+    --tran-05: all 0.5s ease;
 }
 
 body{
@@ -42,6 +43,7 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --covid-text-color: #FFFF00;
 }
 
 /* ===== Sidebar ===== */
@@ -304,7 +306,8 @@ body.dark .switch::before{
     width: calc(100% - 78px);
 }
 body.dark .home .text{
-    color: var(--text-color);
+    color: var(--covid-text-color);
+    text-decoration: none;
 }
 .home .noticecovid19 {
 	justify-content: center;
@@ -312,15 +315,15 @@ body.dark .home .text{
     font-size: 25px;
     font-weight: 500;
     background: #FF0000;
-    color: #FFD700;
+    color: var(--covid-text-color);
     height: 1.8em;
     line-height: 100%;
-    font-family: DFKai-sb;
     font-weight:bold;
     position: absolute;
     top: 2px;
     left: 5px;
     text-align: center;
+    text-decoration: none;
     width: calc(100% - 18px);
     z-index: 99;
     border-top-left-radius: 10px;
