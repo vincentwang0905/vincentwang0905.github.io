@@ -26,6 +26,8 @@ body{
     transition: var(--tran-05);
     -moz-user-select : none;
     -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 ::selection{
@@ -303,4 +305,35 @@ body.dark .switch::before{
 }
 body.dark .home .text{
     color: var(--text-color);
+}
+.home .noticecovid19 {
+	justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+    background: #FF0000;
+    color: #FFD700;
+    height: 1.8em;
+    line-height: 100%;
+    font-family: DFKai-sb;
+    font-weight:bold;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    text-align: center;
+    width: calc(100% - 18px);
+    z-index: 99;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: var(--tran-05);
+}
+.sidebar.close ~ .home .noticecovid19{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 18px;
+    width: calc(100% - 26px);
+    transition: var(--tran-05);
 }
