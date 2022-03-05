@@ -340,3 +340,8 @@ body.dark .home .text{
     width: calc(100% - 26px);
     transition: var(--tran-05);
 }
+@media (max-width: 800px) {
+    .home .noticecovid19 {
+        height: 3.0em;
+    }
+}
