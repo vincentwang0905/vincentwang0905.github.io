@@ -345,3 +345,7 @@ body.dark .home .text{
         height: 3.0em;
     }
 }
+.ahref {
+  text-decoration: none;
+  color: #FFFFFF;
+}
