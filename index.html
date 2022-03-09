@@ -112,6 +112,9 @@ Swal.fire({
   allowOutsideClick: false,
   allowEscapeKey: false,
   allowEnterKey: false,
+  customClass: {
+  container: 'text-decoration: none;color: #FFFFFF'
+  },
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire({
