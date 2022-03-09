@@ -99,6 +99,18 @@ modeSwitch.addEventListener("click" , () =>{
         window.event.returnValue = false; 
         return false; 
     }
+Swal.fire({
+  title: 'Cookie',
+  icon: 'info',
+  html:
+    '本網站使用Cookie' +
+    '是否同意我們使用Cookie收集您的資料?',
+  showCancelButton: true,
+  confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> 是!',
+  cancelButtonText:
+    '<i class="fa fa-thumbs-down"></i> 否',
+})
 </script>
 
 </body>
