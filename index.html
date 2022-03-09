@@ -101,15 +101,22 @@ modeSwitch.addEventListener("click" , () =>{
     }
 Swal.fire({
   title: 'Cookie',
-  icon: 'info',
   html:
-    '本網站使用Cookie' +
-    '是否同意我們使用Cookie收集您的資料?',
+    '本網站使用Cookie</br>是否同意我們使用Cookie收集您的資料?',
+  icon: 'warning',
   showCancelButton: true,
-  confirmButtonText:
-    '<i class="fa fa-thumbs-up"></i> 是!',
-  cancelButtonText:
-    '<i class="fa fa-thumbs-down"></i> 否',
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: '<i class="fa-solid fa-check"></i>是的我同意!',
+  cancelButtonText: '<i class="fa-solid fa-xmark"></i>否我不同意!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      '完成!',
+      '點擊下方按鈕來瀏覽網頁吧!',
+      'OK'
+    )
+  }
 })
 </script>
 
