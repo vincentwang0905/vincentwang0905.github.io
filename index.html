@@ -99,6 +99,9 @@ modeSwitch.addEventListener("click" , () =>{
         window.event.returnValue = false; 
         return false; 
     } 
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
 </script>
 
 </body>
