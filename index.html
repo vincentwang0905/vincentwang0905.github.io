@@ -112,11 +112,12 @@ Swal.fire({
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire({
-        icon: 'success',
-      '完成!',
-      '點擊下方按鈕來瀏覽網頁吧!',
-      'OK'
-    })
+  position: 'top-end',
+  icon: 'success',
+  title: '完成',
+  showConfirmButton: false,
+  timer: 1000
+})
   }
 })
 </script>
