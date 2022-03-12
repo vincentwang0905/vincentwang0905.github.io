@@ -99,7 +99,17 @@ modeSwitch.addEventListener("click" , () =>{
     window.onkeydown = window.onkeyup = window.onkeypress = function () { 
         window.event.returnValue = false; 
         return false; 
-    }
+    };
+var AdBlocker = AdBlocker || false;
+if (!AdBlocker) {
+Swal.fire({
+  title: '注意',
+  icon: 'warning',
+  html:
+    '偵測到您使用廣告攔截器(AD Blocker)</br>請關閉您的廣告攔截器(AD Blocker)',
+  confirmButtonText: '<a href="https://www.friedshrimp.ga/" class="ahref"><i class="fa-solid fa-check "></i>我已關閉!',
+});
+} else {
 Swal.fire({
   title: 'Cookie',
   html:
@@ -130,15 +140,6 @@ Swal.fire({
   allowEnterKey: false,
 })
   }
-})
-var AdBlocker = AdBlocker || false;
-if (!AdBlocker) {
-Swal.fire({
-  title: '注意',
-  icon: 'warning',
-  html:
-    '偵測到您使用廣告攔截器(AD Blocker)</br>請關閉您的廣告攔截器(AD Blocker)',
-  confirmButtonText: '<a href="https://www.friedshrimp.ga/" class="ahref"><i class="fa-solid fa-check "></i>我已關閉!',
 });
 }
 </script>
