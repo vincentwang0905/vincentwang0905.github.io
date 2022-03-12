@@ -358,7 +358,7 @@ body.dark .home .text{
 }
 @media (max-width: 400px) {
     .home .noticecovid19 {
-        height: 4.0em;
+        height: 5.0em;
         font-size: 18px;
     }
 }
