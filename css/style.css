@@ -312,7 +312,7 @@ body.dark .home .text{
 .home .noticecovid19 {
 	justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 500;
     background: #FF0000;
     color: var(--covid-text-color);
@@ -344,21 +344,22 @@ body.dark .home .text{
   text-decoration: none;
   color: #FFFFFF;
 }
-@media (max-width: 600px) {
+@media (max-width: 425px) {
     .home .noticecovid19 {
         height: 3.0em;
-	font-size: 22px;
+	font-size: 21px;
     }
 }
-@media (max-width: 450px) {
+}
+@media (max-width: 375px) {
     .home .noticecovid19 {
         height: 4.0em;
-	font-size: 20px;
+        font-size: 18px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 320px) {
     .home .noticecovid19 {
-        height: 5.0em;
-        font-size: 18px;
+        height: 4.0em;
+        font-size: 15px;
     }
 }
