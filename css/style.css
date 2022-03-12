@@ -340,12 +340,25 @@ body.dark .home .text{
     width: calc(100% - 26px);
     transition: var(--tran-05);
 }
-@media (max-width: 800px) {
-    .home .noticecovid19 {
-        height: 3.0em;
-    }
-}
 .ahref {
   text-decoration: none;
   color: #FFFFFF;
+}
+@media (max-width: 600px) {
+    .home .noticecovid19 {
+        height: 3.0em;
+	font-size: 22px;
+    }
+}
+@media (max-width: 450px) {
+    .home .noticecovid19 {
+        height: 4.0em;
+	font-size: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .home .noticecovid19 {
+        height: 4.0em;
+        font-size: 18px;
+    }
 }
