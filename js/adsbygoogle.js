@@ -1,9 +1,4 @@
-try {
-    fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
-        method: "HEAD",
-        mode: "no-cors"
-    })).then(function (response) {
-        Swal.fire({
+Swal.fire({
   title: 'Cookie',
   html:
     '本網站使用Cookie</br>是否同意我們使用Cookie收集您的資料?',
@@ -33,21 +28,10 @@ try {
   allowEnterKey: false,
 })
 };
-    }).catch(function (e) {
-        
-        Swal.fire({
-    title: '注意',
-    icon: 'warning',
-    html:
-      '偵測到您使用廣告攔截器(AD Blocker)</br>請關閉您的廣告攔截器(AD Blocker)',
-    confirmButtonText: '<a href="https://www.friedshrimp.ga/" class="ahref"><i class="fa-solid fa-check "></i>我已關閉!',
-    });
-} catch (e) {
-    Swal.fire({
-    title: '注意',
-    icon: 'warning',
-    html:
-      '偵測到您使用廣告攔截器(AD Blocker)</br>請關閉您的廣告攔截器(AD Blocker)',
-    confirmButtonText: '<a href="https://www.friedshrimp.ga/" class="ahref"><i class="fa-solid fa-check "></i>我已關閉!',
-    });
-}
+# Swal.fire({
+#    title: '注意',
+#    icon: 'warning',
+#    html:
+#      '偵測到您使用廣告攔截器(AD Blocker)</br>請關閉您的廣告攔截器(AD Blocker)',
+#    confirmButtonText: '<a href="https://www.friedshrimp.ga/" class="ahref"><i class="fa-solid fa-check "></i>我已關閉!',
+#    });
