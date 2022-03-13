@@ -342,7 +342,7 @@ body.dark .home .text{
   text-decoration: none;
   color: #FFFFFF;
 }
-@media (max-width: 768px) {
+@media (max-width: 787px) {
     .home .noticecovid19 {
 	    font-size: 20px;
     }
