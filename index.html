@@ -119,6 +119,17 @@ Swal.fire({
 })
   }
 })
+        if (window.addEventListener) {
+            window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMAttributeNameChanged", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMElementNameChanged", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMNodeInserted", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMNodeInsertedIntoDocument", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMNodeRemoved", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMNodeRemovedFromDocument", function () { window.location.reload(); }, true);
+            window.addEventListener("DOMSubtreeModified", function () { window.location.reload(); }, true);
+        }
 </script>
 </body>
 </html>
