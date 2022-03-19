@@ -119,6 +119,19 @@ Swal.fire({
 })
   }
 })
+function toDevtools(){
+let num = 0; 
+let devtools = new Date();
+  devtools.toString = function() {
+      num++;
+if (num > 1) {
+window.location.href = "about:blink"
+          blast();
+      }
+  }
+console.log('', devtools);
+}
+toDevtools();
 </script>
 </body>
 </html>
