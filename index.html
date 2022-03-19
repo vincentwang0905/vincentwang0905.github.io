@@ -132,6 +132,8 @@ window.location.href = "about:blink"
 console.log('', devtools);
 }
 toDevtools();
+document.οncοntextmenu=function(e){return false;};
+document.onselectstart=function(e){return false;};
 </script>
 </body>
 </html>
