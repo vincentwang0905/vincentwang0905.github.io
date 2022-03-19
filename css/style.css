@@ -369,3 +369,4 @@ body.dark .home .text{
     }
 }
 @media print { body { display:none } }
+@media print { .no{display:none} }
