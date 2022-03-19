@@ -368,3 +368,4 @@ body.dark .home .text{
         width:220px;
     }
 }
+@media print { body { display:none } }
